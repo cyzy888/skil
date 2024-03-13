@@ -10,7 +10,10 @@ const apiurl = "https://apis.tianapi.com/oilprice/index?key=d1666ef61ef05d151f2f
         const obj = JSON.parse(response.body);
         const { prov, p0, p92, p95, p98, time } = obj.result;
         
-        const message = `${prov}油价提醒\n${time}\n92号汽油: ¥${p92} 95号汽油: ¥${p95} 98号汽油: ¥${p98} 0号柴油: ¥${p0}`;
+        const message = `${prov}油价提醒\n${time}\n92号汽油: ¥${p92} 
+        95号汽油: ¥${p95} 
+        98号汽油: ¥${p98} 
+        0号柴油: ¥${p0}`;
         
         $notify(prov + "油价提醒", time, message);
     } catch (error) {
